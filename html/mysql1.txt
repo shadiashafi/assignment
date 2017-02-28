@@ -1,0 +1,14 @@
+mysql> create table tbl_stock(pk_int_stock_id int auto_increment primary key,vchr_name varchar(20),int_quantity int,int_price
+ int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> desc tbl_stock;
++-----------------+-------------+------+-----+---------+----------------+
+| Field           | Type        | Null | Key | Default | Extra          |
++-----------------+-------------+------+-----+---------+----------------+
+| pk_int_stock_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| vchr_name       | varchar(20) | YES  |     | NULL    |                |
+| int_quantity    | int(11)     | YES  |     | NULL    |                |
+| int_price       | int(11)     | YES  |     | NULL    |                |
++-----------------+-------------+------+-----+---------+----------------+
+4 rows in set (0.01 sec)
