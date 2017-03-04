@@ -1,0 +1,12 @@
+mysql>INSERT INTO tbl_supplier(vchr_supplier_name) VALUES("Logitech"),("Samsung"),("Iball"),("LG"),("Creative");
+mysql>desc tbl_supplier;
+
++----------------+--------------------+
+| pk_supplier_id | vchr_supplier_name |
++----------------+--------------------+
+|              1 | Logitech           |
+|              2 | Samsung            |
+|              3 | Iball              |
+|              4 | LG                 |
+|              5 | Creative           |
++----------------+--------------------+

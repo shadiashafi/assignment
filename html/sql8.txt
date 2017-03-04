@@ -1,0 +1,11 @@
+mysql>CREATE TABLE tbl_enrollment(pk_int_enrollment_id int primary key auto_increment,int_count int,fk_int_class_id int,foreign key(fk_int_class_id) references tbl_classes(pk_int_class_id));
+
+
+mysql> desc tbl_enrollment;
++----------------------+---------+------+-----+---------+----------------+
+| Field                | Type    | Null | Key | Default | Extra          |
++----------------------+---------+------+-----+---------+----------------+
+| pk_int_enrollment_id | int(11) | NO   | PRI | NULL    | auto_increment |
+| int_count            | int(11) | YES  |     | NULL    |                |
+| fk_int_class_id      | int(11) | YES  | MUL | NULL    |                |
++----------------------+---------+------+-----+---------+----------------+

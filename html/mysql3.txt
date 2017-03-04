@@ -1,0 +1,11 @@
+mysql> CREATE TABLE tbl_supplier(pk_int_supplier_id int AUTO_INCREMENT,vchr_supplier_name varchar(25),primary key(pk_int_supplier_id)
+);
+
+mysql> desc tbl_supplier;
++--------------------+-------------+------+-----+---------+----------------+
+| Field              | Type        | Null | Key | Default | Extra          |
++--------------------+-------------+------+-----+---------+----------------+
+| pk_int_supplier_id | int(11)     | NO   | PRI | NULL    | auto_increment |
+| vchr_supplier_name | varchar(25) | YES  |     | NULL    |                |
++--------------------+-------------+------+-----+---------+----------------+
+2 rows in set (0.01 sec)
