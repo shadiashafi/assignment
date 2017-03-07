@@ -1,0 +1,16 @@
+mysql> insert into tbl_dept (vchr_dept_name,vchr_dept_description) values ('Computer Science','CS'),('Electronics','EC'),('Co
+mmerce','CC'),('Arts','AR');
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+
+mysql> select * from tbl_dept;
++----------------+------------------+-----------------------+
+| pk_int_dept_id | vchr_dept_name   | vchr_dept_description |
++----------------+------------------+-----------------------+
+|              1 | Computer Science | CS                    |
+|              2 | Electronics      | EC                    |
+|              3 | Commerce         | CC                    |
+|              4 | Arts             | AR                    |
++----------------+------------------+-----------------------+
+4 rows in set (0.00 sec)
