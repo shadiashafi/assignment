@@ -1,0 +1,12 @@
+create table tbl_project_payment_record(pk_int_ppr_id int(11) primary key auto_increment,fk_int_project_id int(11),int_paid_amount int(11),dat_of_payment date,foreign key(fk_int_project_id) references tbl_projects(pk_int_project_id));
+
+mysql> desc tbl_project_payment_record;
++-------------------+---------+------+-----+---------+----------------+
+| Field             | Type    | Null | Key | Default | Extra          |
++-------------------+---------+------+-----+---------+----------------+
+| pk_int_ppr_id     | int(11) | NO   | PRI | NULL    | auto_increment |
+| fk_int_project_id | int(11) | YES  | MUL | NULL    |                |
+| int_paid_amount   | int(11) | YES  |     | NULL    |                |
+| dat_of_payment    | date    | YES  |     | NULL    |                |
++-------------------+---------+------+-----+---------+----------------+
+4 rows in set (0.08 sec)

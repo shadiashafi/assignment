@@ -1,0 +1,12 @@
+create table tbl_project_album (pk_int_album_id int(11) primary key auto_increment,fk_int_project_id int(11),vchr_album_name varchar(100),vchr_album_description varchar(100),foreign key(fk_int_project_id) references tbl_projects(pk_int_project_id));
+
+mysql> desc tbl_project_album;
++------------------------+--------------+------+-----+---------+----------------+
+| Field                  | Type         | Null | Key | Default | Extra          |
++------------------------+--------------+------+-----+---------+----------------+
+| pk_int_album_id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| fk_int_project_id      | int(11)      | YES  | MUL | NULL    |                |
+| vchr_album_name        | varchar(100) | YES  |     | NULL    |                |
+| vchr_album_description | varchar(100) | YES  |     | NULL    |                |
++------------------------+--------------+------+-----+---------+----------------+
+4 rows in set (0.03 sec)

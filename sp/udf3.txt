@@ -1,0 +1,13 @@
+create table tbl_picture(fk_int_album_id int(11),pk_int_picture_id int(11) primary key auto_increment,vchr_picture_name varchar(100),vchr_picture_description varchar(200),vchr_picture_path varchar(200),foreign key(fk_int_album_id) references tbl_project_album(pk_int_album_id));
+
+mysql> desc tbl_picture;
++--------------------------+--------------+------+-----+---------+----------------+
+| Field                    | Type         | Null | Key | Default | Extra          |
++--------------------------+--------------+------+-----+---------+----------------+
+| fk_int_album_id          | int(11)      | YES  | MUL | NULL    |                |
+| pk_int_picture_id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| vchr_picture_name        | varchar(100) | YES  |     | NULL    |                |
+| vchr_picture_description | varchar(200) | YES  |     | NULL    |                |
+| vchr_picture_path        | varchar(200) | YES  |     | NULL    |                |
++--------------------------+--------------+------+-----+---------+----------------+
+5 rows in set (0.05 sec)
