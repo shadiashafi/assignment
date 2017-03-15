@@ -1,0 +1,18 @@
+create unique index index_dept on tbl_department(vchr_department_name);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+ 
+mysql> show index from tbl_department;
++----------------+------------+------------+--------------+----------------------+-----------+-------------+----------+------
+--+------+------------+---------+---------------+
+| Table          | Non_unique | Key_name   | Seq_in_index | Column_name          | Collation | Cardinality | Sub_part | Packe
+d | Null | Index_type | Comment | Index_comment |
++----------------+------------+------------+--------------+----------------------+-----------+-------------+----------+------
+--+------+------------+---------+---------------+
+| tbl_department |          0 | PRIMARY    |            1 | pk_int_department_id | A         |           3 |     NULL | NULL
+  |      | BTREE      |         |               |
+| tbl_department |          0 | index_dept |            1 | vchr_department_name | A         |           3 |     NULL | NULL
+  | YES  | BTREE      |         |               |
++----------------+------------+------------+--------------+----------------------+-----------+-------------+----------+------
+--+------+------------+---------+---------------+
+2 rows in set (0.00 sec)
