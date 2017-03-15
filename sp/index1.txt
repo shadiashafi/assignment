@@ -1,0 +1,26 @@
+mysql> create index index_student on tbl_students(vchr_student_name,vchr_student_place,vchr_student_district);
+Query OK, 0 rows affected (0.24 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> show index from tbl_students;
++--------------+------------+----------------+--------------+-----------------------+-----------+-------------+----------+---
+-----+------+------------+---------+---------------+
+| Table        | Non_unique | Key_name       | Seq_in_index | Column_name           | Collation | Cardinality | Sub_part | Pa
+cked | Null | Index_type | Comment | Index_comment |
++--------------+------------+----------------+--------------+-----------------------+-----------+-------------+----------+---
+-----+------+------------+---------+---------------+
+| tbl_students |          0 | PRIMARY        |            1 | pk_int_student_id     | A         |           4 |     NULL | NU
+LL   |      | BTREE      |         |               |
+| tbl_students |          1 | fk_int_dept_id |            1 | fk_int_dept_id        | A         |           4 |     NULL | NU
+LL   | YES  | BTREE      |         |               |
+| tbl_students |          1 | fk_int_user_id |            1 | fk_int_user_id        | A         |           4 |     NULL | NU
+LL   | YES  | BTREE      |         |               |
+| tbl_students |          1 | index_student  |            1 | vchr_student_name     | A         |           4 |     NULL | NU
+LL   | YES  | BTREE      |         |               |
+| tbl_students |          1 | index_student  |            2 | vchr_student_place    | A         |           4 |     NULL | NU
+LL   | YES  | BTREE      |         |               |
+| tbl_students |          1 | index_student  |            3 | vchr_student_district | A         |           4 |     NULL | NU
+LL   | YES  | BTREE      |         |               |
++--------------+------------+----------------+--------------+-----------------------+-----------+-------------+----------+---
+-----+------+------------+---------+---------------+
+6 rows in set (0.08 sec)

@@ -1,0 +1,16 @@
+create table tbl_projects(fk_int_category_id int(11),pk_int_project_id int(11) primary key auto_increment,vchr_project_name varchar(100),vchr_project_description varchar(100),bln_project_status tinyint(4),int_project_cost int(11),dat_proj_start_date date,vchr_lead_name varchar(100),foreign key(fk_int_category_id) references tbl_category(pk_int_category_id));
+
+mysql> desc tbl_projects;
++--------------------------+--------------+------+-----+---------+----------------+
+| Field                    | Type         | Null | Key | Default | Extra          |
++--------------------------+--------------+------+-----+---------+----------------+
+| fk_int_category_id       | int(11)      | YES  | MUL | NULL    |                |
+| pk_int_project_id        | int(11)      | NO   | PRI | NULL    | auto_increment |
+| vchr_project_name        | varchar(100) | YES  |     | NULL    |                |
+| vchr_project_description | varchar(100) | YES  |     | NULL    |                |
+| bln_project_status       | tinyint(4)   | YES  |     | NULL    |                |
+| int_project_cost         | int(11)      | YES  |     | NULL    |                |
+| dat_proj_start_date      | date         | YES  |     | NULL    |                |
+| vchr_lead_name           | varchar(100) | YES  |     | NULL    |                |
++--------------------------+--------------+------+-----+---------+----------------+
+8 rows in set (0.02 sec)
